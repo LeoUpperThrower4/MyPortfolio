@@ -8,7 +8,7 @@ interface CardStructureProps {
 
 export function CardStructure({ children, className }: CardStructureProps) {
   return (
-    <div className={twMerge(`rounded-lg text-white bg-zinc-700 ${className ?? ''}`)}>
+    <div className={twMerge(`rounded-3xl text-white bg-zinc-700 ${className ?? ''}`)}>
       {children}
     </div>
   )
