@@ -6,6 +6,12 @@ module.exports = {
         2: '2',
         3: '3'
       },
+      backgroundImage: {
+        'usegptest': "url('../../public/usegptest_hero.png')",
+        'nelogica': "url('../../public/nelogica_hero.png')",
+        'eu': "url('../../public/eu.jpg')",
+        'furg': "url('../../public/furg.jpg')",
+      },
     }
   },
   content: [
