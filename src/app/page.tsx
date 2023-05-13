@@ -21,7 +21,7 @@ export default function Home() {
   const today = new Date();
   const diffYear = today.getFullYear() - firstJobDate.getFullYear();
   return (
-    <main className="grid grid-cols-8 grid-rows-[12] gap-3 w-full h-screen p-8">
+    <main className="grid grid-cols-8 grid-rows-[12] gap-3 w-full p-16">
       {/* Welcome */}
       <CardStructure className="flex flex-col justify-center py-6 px-8 
       col-span-8 min-h-[6rem]">
