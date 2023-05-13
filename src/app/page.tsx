@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CardStructure } from "../components/CardStructure";
 import { Mail, Linkedin, GitHub, Download } from "react-feather";
 
@@ -54,34 +55,76 @@ export default function Home() {
           })}
       </CardStructure>      
       {/* Portfolio */}
-      <CardStructure className="col-span-8 min-h-[16rem] relative overflow-hidden bg-cover bg-usegptest">
+      <CardStructure className="col-span-8 min-h-[16rem] relative overflow-hidden group">
+        <Image
+              src={'/usegptest_hero.png'}
+              alt="Nelogica Website Cover"
+              fill
+              style={{objectFit: 'cover'}}
+              className="transition-all duration-300 ease-in-out group-hover:scale-110"
+        />               
         <span className="
+        transition-all duration-500 ease-in-out 
+        group-hover:text-2xl
         flex items-end justify-center
         roundend-lg absolute top-0 right-0 left-0 bottom-0
           
         p-4 bg-gradient-to-t from-[#3E3B3B] to-transparent
-        text-white text-lg">Portfolio</span>
+        text-white text-lg">
+          Portfolio
+        </span>
       </CardStructure>
       {/* Work Experience */}
-      <CardStructure className="col-span-8 p-2 min-h-[16rem] relative overflow-hidden bg-cover bg-nelogica">
-      <span className="
-        flex items-end justify-center
-        roundend-lg absolute top-0 right-0 left-0 bottom-0
-        p-4 bg-gradient-to-t from-[#3E3B3B] to-transparent
-        text-white text-lg">Work Experience</span>
+      <CardStructure className="col-span-8 p-2 min-h-[16rem] relative overflow-hidden group">
+        <Image
+            src={'/nelogica_hero.png'}
+            alt="Nelogica Website Cover"
+            fill
+            style={{objectFit: 'cover'}}
+            className="transition-all duration-300 ease-in-out group-hover:scale-110"
+        />            
+        <span className="
+          transition-all duration-500 ease-in-out 
+          group-hover:text-2xl      
+          flex items-end justify-center
+          roundend-lg absolute top-0 right-0 left-0 bottom-0
+          p-4 bg-gradient-to-t from-[#3E3B3B] to-transparent
+          text-white text-lg">
+            Work Experience
+        </span>
       </CardStructure>  
       {/* About Me */}
-      <CardStructure className="col-span-4 min-h-[20rem] relative overflow-hidden bg-cover bg-eu bg-top">
-      <span className="
-        flex items-end justify-center
-        roundend-lg absolute top-0 right-0 left-0 bottom-0
-        p-4 bg-gradient-to-t from-[#3E3B3B] to-transparent
-        text-white text-lg">About Me</span>         
-        
+      <CardStructure className="col-span-4 min-h-[20rem] relative overflow-hidden group">
+        <Image
+          src={'/eu.jpg'}
+          alt="Leonardo`s Picture. White man with a beard and short hair."
+          fill
+          style={{objectFit: 'cover'}}
+          className="transition-all duration-300 ease-in-out group-hover:scale-110"
+        />    
+        <span className="
+          transition-all duration-500 ease-in-out 
+          group-hover:text-2xl
+          flex items-end justify-center
+          roundend-lg absolute top-0 right-0 left-0 bottom-0
+          p-4 bg-gradient-to-t from-[#3E3B3B] to-transparent
+          text-white text-lg">
+            About Me
+        </span>         
+          
       </CardStructure>
       {/* Education History */}
-      <CardStructure className="col-span-4 min-h-[20rem] relative overflow-hidden bg-cover bg-furg bg-top">
+      <CardStructure className="col-span-4 min-h-[20rem] relative overflow-hidden group">
+      <Image
+          src={'/furg.jpg'}
+          alt="Picture of the author"
+          fill
+          style={{objectFit: 'cover'}}
+          className="transition-all duration-500 ease-in-out group-hover:scale-110"
+        />          
       <span className="
+        transition-all duration-500 ease-in-out 
+        group-hover:text-2xl
         flex items-end justify-center
         roundend-lg absolute top-0 right-0 left-0 bottom-0
         p-4 bg-gradient-to-t from-[#3E3B3B] to-transparent
