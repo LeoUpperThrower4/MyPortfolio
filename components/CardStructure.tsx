@@ -13,7 +13,7 @@ export function CardStructure({ children, className, layoutId, updateSelectedCar
   return (
     <motion.div 
       layoutId={layoutId}
-      className={twMerge(`cursor-pointer rounded-3xl text-white bg-[#3E3B3B] ${className ?? ''}`)}
+      className={twMerge(`cursor-pointer rounded-3xl text-white bg-[#016FB9] ${className ?? ''}`)}
       onClick={() => updateSelectedCard && updateSelectedCard(layoutId ?? '')}
     >
       {children}
