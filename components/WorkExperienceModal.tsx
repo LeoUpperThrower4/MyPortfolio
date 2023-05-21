@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
-import { motion } from 'framer-motion'
+import { motion, useDragControls } from 'framer-motion'
+import { useRef } from 'react'
 
 const interBold = Inter({ subsets: ['latin']})
 
@@ -31,8 +32,14 @@ const itemFromLeft = {
 }
 
 export function WorkExperienceModal() {  
+  const ul = useRef(null)
+
+  function handleDrag(_, info) {
+    ul.current.scrollLeft -= info.delta.x
+  }
+
   return (
-      <motion.ul className="overflow-x-auto flex gap-4 px-4 py-6 basis-1 h-full text-blue-100" variants={container} initial="hidden" animate="visible">
+      <motion.ul ref={ul} onPan={handleDrag} className="select-none overflow-x-auto flex gap-4 px-4 py-6 basis-1 h-full text-blue-100" variants={container} initial="hidden" animate="visible">
         <motion.li className="h-full w-2/3 rounded-3xl flex-shrink-0 snap-x p-8 bg-blue-400" viewport={{once: true}}>
           <motion.h1 className={`text-2xl text-center font-bold mb-4 ${interBold.className}`} variants={itemFromTop}>Software Developer Intern</motion.h1>
           <motion.h1 className={`text-xl font-medium ${interBold.className}`} variants={itemFromLeft}>Nelogica</motion.h1>
